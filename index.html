@@ -1,64 +1,172 @@
-<!DOCTYPE html>
-<html lang="pt-br" class="">
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon_io/site.webmanifest" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
-  <link rel="manifest" href="favicon_io/site.webmanifest">
-  <link rel="stylesheet" href="style.css" />
-  <title>Dev Links Jackson</title>
-</head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Dev Links Jackson </title>
+  </head>
 
-<body>
-  <div id="container">
-    <div id="profile">
-      <img src="./assets/avatar.png" alt="Imagem do Jackson com uma camisa preta e usando oculos" />
-      <br><br>
-      <h1 id="welcome-message">Seja Bem-Vindo!</h1>
+  <body
+    class="bg-[url('./assets/bg-mobile.jpg')] md:bg-[url('./assets/bg-desktop.jpg')] dark:bg-[url('./assets/bg-mobile-light.jpg')] dark:md:bg-[url('./assets/bg-desktop-light.jpg')] bg-no-repeat bg-top bg-cover font-inter text-white dark:text-slate-800 min-h-screen py-10 selection:bg-purple-500/30"
+  >
+    <div
+      id="container"
+      class="w-full max-w-[420px] mx-auto px-6 flex flex-col items-center"
+    >
+      <div id="profile" class="text-center flex flex-col items-center w-full">
+        <div class="relative group cursor-pointer inline-block mt-4">
+          <div
+            class="absolute -inset-2 rounded-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500 opacity-20 group-hover:opacity-75 blur-md transition-opacity duration-300"
+          ></div>
+
+          <img
+            class="relative w-36 h-36 md:w-40 md:h-40 block mx-auto rounded-2xl border-4 border-white/30 dark:border-black/10 object-cover shadow-2xl transition-all duration-300 group-hover:scale-105"
+            src="./assets/avatar.png"
+            alt="Imagem do Jackson com uma camisa preta e usando óculos"
+          />
+        </div>
+
+        <h1
+          id="welcome-message"
+          class="font-semibold text-2xl tracking-tight mt-6 text-white dark:text-slate-900 drop-shadow-sm"
+        >
+          Seja Bem-Vindo!
+        </h1>
+        <p class="text-white/80 dark:text-slate-600 font-medium text-sm mt-1">
+          Confira abaixo minhas redes de contato
+        </p>
+      </div>
+
+      <div
+        id="switch"
+        class="relative w-[64px] h-[32px] mt-8 mb-6 mx-auto cursor-pointer group"
+        onclick="toggleMode()"
+        role="switch"
+        aria-checked="false"
+        tabindex="0"
+      >
+        <span
+          class="absolute inset-0 top-1 left-0 w-[64px] h-[24px] bg-white/10 dark:bg-black/5 border border-white/40 dark:border-black/20 backdrop-blur-md rounded-full shadow-inner z-0"
+        ></span>
+
+        <button
+          class="w-8 h-8 bg-white dark:bg-slate-100 bg-[url('./assets/moon-stars.svg')] dark:bg-[url('./assets/sun.svg')] bg-no-repeat bg-center rounded-full shadow-[0_0_15px_rgba(255,255,255,0.4)] dark:shadow-[0_0_15px_rgba(0,0,0,0.2)] absolute top-0 left-0 z-10 animate-[slide-back_0.5s_forwards] dark:animate-[slide-in_0.5s_forwards]"
+          tabindex="-1"
+        ></button>
+      </div>
+
+      <nav id="social-links" class="flex flex-col gap-4 w-full mt-4">
+        <a
+          class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-slate-900/40 dark:hover:bg-slate-900/10 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-500/50"
+          href="https://github.com/JacksonLuiz99"
+          target="_blank"
+        >
+          <ion-icon
+            name="logo-github"
+            class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-white dark:group-hover:text-slate-900 group-hover:scale-110 transition-transform"
+          ></ion-icon>
+          <span
+            class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
+            >GitHub</span
+          >
+        </a>
+
+        <a
+          class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#0077b5]/30 dark:hover:bg-[#0077b5]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(0,119,181,0.3)] hover:border-[#0077b5]/60"
+          href="https://www.linkedin.com/in/jackson-luiz-69a909238/"
+          target="_blank"
+        >
+          <ion-icon
+            name="logo-linkedin"
+            class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#00a0dc] group-hover:scale-110 transition-transform"
+          ></ion-icon>
+          <span
+            class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
+            >LinkedIn</span
+          >
+        </a>
+
+        <a
+          class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#25D366]/30 dark:hover:bg-[#25D366]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(37,211,102,0.3)] hover:border-[#25D366]/60"
+          href="https://api.whatsapp.com/send?phone=5565999161859&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20DevLinks"
+          target="_blank"
+        >
+          <ion-icon
+            name="logo-whatsapp"
+            class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#25D366] group-hover:scale-110 transition-transform"
+          ></ion-icon>
+          <span
+            class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
+            >WhatsApp</span
+          >
+        </a>
+
+        <a
+          class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#E1306C]/30 dark:hover:bg-[#E1306C]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(225,48,108,0.3)] hover:border-[#E1306C]/60"
+          href="https://www.instagram.com/jacksonluiz99/"
+          target="_blank"
+        >
+          <ion-icon
+            name="logo-instagram"
+            class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#E1306C] group-hover:scale-110 transition-transform"
+          ></ion-icon>
+          <span
+            class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
+            >Instagram</span
+          >
+        </a>
+      </nav>
+
+      <footer
+        class="mt-12 text-center text-[13px] text-white/60 dark:text-slate-500 font-medium pb-8"
+      >
+        Desenvolvido por
+        <a
+          href="https://www.linkedin.com/in/jackson-luiz-69a909238/"
+          target="_blank"
+          class="text-white hover:text-purple-400 dark:text-slate-800 dark:hover:text-purple-600 transition-colors"
+          >Jackson Luiz</a
+        >
+      </footer>
     </div>
 
-    <div id="switch" onclick="toggleMode()">
-      <button></button>
-      <span> </span>
-    </div>
-    <div>
-      <br>
-      <h4 class="txt-center">Confira abaixo minhas redes sociais:</h4>
-    </div>
-    <div id="social-links">
-      <a href="https://github.com/JacksonLuiz99" target="_blank">
-        <ion-icon name="logo-github"> </ion-icon>
-      </a>
-
-      <a href="https://www.linkedin.com/in/jackson-luiz-69a909238/" target="_blank">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a>
-      <a href="https://api.whatsapp.com/send?phone=5565999161859&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20DevLinks"
-        target="_blank">
-        <ion-icon name="logo-whatsapp"></ion-icon>
-      </a>
-
-      <a href="https://www.instagram.com/jacksonluiz99/" target="_blank">
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a>
-    </div>
-  </div>
-  <div>
-    <footer class="txt"> Desenvolvido por
-      <a href="https://www.linkedin.com/in/jackson-luiz-69a909238/" target="_blank">Jackson Luiz &copy;</a>
-    </footer>
-  </div>
-
-  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-  <script src="./script.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script.js"></script>
+  </body>
 </html>
