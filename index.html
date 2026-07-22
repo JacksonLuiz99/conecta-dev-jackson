@@ -70,7 +70,9 @@
         id="switch"
         class="relative w-[64px] h-[32px] mt-8 mb-6 mx-auto cursor-pointer group"
         onclick="toggleMode()"
+        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleMode(); }"
         role="switch"
+        aria-label="Alternar entre tema claro e escuro"
         aria-checked="false"
         tabindex="0"
       >
@@ -89,10 +91,12 @@
           class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-slate-900/40 dark:hover:bg-slate-900/10 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:border-slate-500/50"
           href="https://github.com/JacksonLuiz99"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ion-icon
             name="logo-github"
             class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-white dark:group-hover:text-slate-900 group-hover:scale-110 transition-transform"
+            aria-hidden="true"
           ></ion-icon>
           <span
             class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
@@ -104,10 +108,12 @@
           class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#0077b5]/30 dark:hover:bg-[#0077b5]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(0,119,181,0.3)] hover:border-[#0077b5]/60"
           href="https://www.linkedin.com/in/jackson-luiz-69a909238/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ion-icon
             name="logo-linkedin"
             class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#00a0dc] group-hover:scale-110 transition-transform"
+            aria-hidden="true"
           ></ion-icon>
           <span
             class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
@@ -119,10 +125,12 @@
           class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#25D366]/30 dark:hover:bg-[#25D366]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(37,211,102,0.3)] hover:border-[#25D366]/60"
           href="https://api.whatsapp.com/send?phone=5565999161859&text=Ol%C3%A1,%20vim%20atrav%C3%A9s%20do%20seu%20DevLinks"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ion-icon
             name="logo-whatsapp"
             class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#25D366] group-hover:scale-110 transition-transform"
+            aria-hidden="true"
           ></ion-icon>
           <span
             class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
@@ -134,10 +142,12 @@
           class="group relative flex items-center p-4 rounded-2xl bg-white/10 dark:bg-black/5 hover:bg-[#E1306C]/30 dark:hover:bg-[#E1306C]/15 border border-white/20 dark:border-slate-800/20 backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_4px_20px_rgba(225,48,108,0.3)] hover:border-[#E1306C]/60"
           href="https://www.instagram.com/jacksonluiz99/"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <ion-icon
             name="logo-instagram"
             class="absolute left-6 text-2xl text-white dark:text-slate-800 group-hover:text-[#E1306C] group-hover:scale-110 transition-transform"
+            aria-hidden="true"
           ></ion-icon>
           <span
             class="w-full text-center font-medium text-white/90 dark:text-slate-700 tracking-wide group-hover:text-white dark:group-hover:text-slate-900"
@@ -153,6 +163,7 @@
         <a
           href="https://www.linkedin.com/in/jackson-luiz-69a909238/"
           target="_blank"
+          rel="noopener noreferrer"
           class="text-white hover:text-purple-400 dark:text-slate-800 dark:hover:text-purple-600 transition-colors"
           >Jackson Luiz</a
         >
