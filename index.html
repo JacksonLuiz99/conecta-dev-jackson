@@ -5,6 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <script>
+      // aplica o tema salvo (ou a preferência do sistema) antes da renderização, evitando flash
+      ;(function () {
+        var saved = localStorage.getItem("theme")
+        var prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches
+        var isLight = saved ? saved === "light" : prefersLight
+        if (isLight) document.documentElement.classList.add("light")
+      })()
+    </script>
+
     <meta
       name="description"
       content="Central de links de Jackson Luiz: acesse GitHub, LinkedIn, Instagram e WhatsApp em um só lugar."
